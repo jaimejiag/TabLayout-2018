@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/ic_tab1</item>
+        <item>@drawable/ic_tab2</item>
+        <item>@drawable/ic_tab3</item>
+        <item>@drawable/ic_tab4</item>
+        <item>@drawable/ic_tab5</item>
+    </array>
+</resources>

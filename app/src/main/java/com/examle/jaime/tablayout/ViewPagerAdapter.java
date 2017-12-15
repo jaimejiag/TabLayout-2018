@@ -5,12 +5,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.ArrayList;
+
 /**
  * Created by usuario on 13/12/17.
  */
 
 class ViewPagerAdapter extends FragmentPagerAdapter {
     private int pageCount;
+    private ArrayList<String> mTitles;
 
 
     public ViewPagerAdapter(FragmentManager fm) {
@@ -18,9 +21,10 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
     }
 
 
-    public ViewPagerAdapter(FragmentManager fm, int pageCount) {
+    public ViewPagerAdapter(FragmentManager fm, int pageCount, ArrayList<String> titles) {
         super(fm);
         this.pageCount = pageCount;
+        mTitles = titles;
     }
 
 
@@ -63,5 +67,11 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return pageCount;
+    }
+
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return super.getPageTitle(position);//mTitles.get(position);
     }
 }
